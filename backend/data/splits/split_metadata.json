@@ -1,0 +1,12 @@
+{
+  "total_samples": 292,
+  "train_samples": 186,
+  "val_samples": 40,
+  "test_samples": 66,
+  "unseen_attack_samples": 25,
+  "split_ratios": "70/15/15 for main data, unseen attacks in test only",
+  "random_state": 42,
+  "stratified": true,
+  "unseen_attack_note": "Unseen attack samples are EXCLUDED from training and validation. They appear ONLY in the test set to evaluate generalization.",
+  "source": "All examples are synthetic, generated for this research project."
+}

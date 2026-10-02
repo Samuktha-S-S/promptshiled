@@ -1,0 +1,4 @@
+{
+  "benign_allow_threshold": 0.55,
+  "injection_block_threshold": 0.55
+}
