@@ -1,0 +1,98 @@
+{
+  "algorithm": "linear_svm",
+  "split": "test",
+  "metrics": {
+    "samples": 80,
+    "accuracy": 0.9125,
+    "precision": 1.0,
+    "recall": 0.851063829787234,
+    "f1": 0.9195402298850575,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.14893617021276595,
+    "confusion_matrix": [
+      [
+        33,
+        0
+      ],
+      [
+        7,
+        40
+      ]
+    ],
+    "tn": 33,
+    "fp": 0,
+    "fn": 7,
+    "tp": 40
+  },
+  "per_category": {
+    "conversational": {
+      "samples": 10,
+      "correct": 10,
+      "correct_rate": 1.0
+    },
+    "conversational_injection": {
+      "samples": 4,
+      "correct": 4,
+      "correct_rate": 1.0
+    },
+    "direct": {
+      "samples": 2,
+      "correct": 2,
+      "correct_rate": 1.0
+    },
+    "instruction_override": {
+      "samples": 3,
+      "correct": 3,
+      "correct_rate": 1.0
+    },
+    "normal": {
+      "samples": 23,
+      "correct": 23,
+      "correct_rate": 1.0
+    },
+    "obfuscated": {
+      "samples": 2,
+      "correct": 1,
+      "correct_rate": 0.5
+    },
+    "paraphrased": {
+      "samples": 5,
+      "correct": 5,
+      "correct_rate": 1.0
+    },
+    "role_based": {
+      "samples": 1,
+      "correct": 1,
+      "correct_rate": 1.0
+    },
+    "system_prompt_extraction": {
+      "samples": 5,
+      "correct": 5,
+      "correct_rate": 1.0
+    },
+    "unseen": {
+      "samples": 25,
+      "correct": 19,
+      "correct_rate": 0.76
+    }
+  },
+  "decisions": {
+    "benign": {
+      "ALLOW": 33,
+      "FLAG": 0,
+      "BLOCK": 0
+    },
+    "prompt_injection": {
+      "ALLOW": 5,
+      "FLAG": 8,
+      "BLOCK": 34
+    }
+  },
+  "thresholds": {
+    "benign_allow_threshold": 0.55,
+    "injection_block_threshold": 0.65,
+    "validation_objective": 0.9578947368421052,
+    "selected_on": "validation"
+  },
+  "score_type": "platt_calibrated_probability"
+}

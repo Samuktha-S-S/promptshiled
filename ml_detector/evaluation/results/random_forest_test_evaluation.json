@@ -1,0 +1,98 @@
+{
+  "algorithm": "random_forest",
+  "split": "test",
+  "metrics": {
+    "samples": 80,
+    "accuracy": 0.925,
+    "precision": 1.0,
+    "recall": 0.8723404255319149,
+    "f1": 0.9318181818181818,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.1276595744680851,
+    "confusion_matrix": [
+      [
+        33,
+        0
+      ],
+      [
+        6,
+        41
+      ]
+    ],
+    "tn": 33,
+    "fp": 0,
+    "fn": 6,
+    "tp": 41
+  },
+  "per_category": {
+    "conversational": {
+      "samples": 10,
+      "correct": 10,
+      "correct_rate": 1.0
+    },
+    "conversational_injection": {
+      "samples": 4,
+      "correct": 4,
+      "correct_rate": 1.0
+    },
+    "direct": {
+      "samples": 2,
+      "correct": 2,
+      "correct_rate": 1.0
+    },
+    "instruction_override": {
+      "samples": 3,
+      "correct": 3,
+      "correct_rate": 1.0
+    },
+    "normal": {
+      "samples": 23,
+      "correct": 23,
+      "correct_rate": 1.0
+    },
+    "obfuscated": {
+      "samples": 2,
+      "correct": 1,
+      "correct_rate": 0.5
+    },
+    "paraphrased": {
+      "samples": 5,
+      "correct": 5,
+      "correct_rate": 1.0
+    },
+    "role_based": {
+      "samples": 1,
+      "correct": 1,
+      "correct_rate": 1.0
+    },
+    "system_prompt_extraction": {
+      "samples": 5,
+      "correct": 4,
+      "correct_rate": 0.8
+    },
+    "unseen": {
+      "samples": 25,
+      "correct": 21,
+      "correct_rate": 0.84
+    }
+  },
+  "decisions": {
+    "benign": {
+      "ALLOW": 33,
+      "FLAG": 0,
+      "BLOCK": 0
+    },
+    "prompt_injection": {
+      "ALLOW": 3,
+      "FLAG": 9,
+      "BLOCK": 35
+    }
+  },
+  "thresholds": {
+    "benign_allow_threshold": 0.55,
+    "injection_block_threshold": 0.55,
+    "validation_objective": 0.9228070175438596,
+    "selected_on": "validation"
+  },
+  "score_type": "tree_vote_fraction"
+}

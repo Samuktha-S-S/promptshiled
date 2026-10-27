@@ -1,0 +1,31 @@
+# PromptShield - Python dependencies
+# Versions are the ones the project was trained and tested with (Python 3.14).
+# scikit-learn must match the version used to train ml_detector/models/*.joblib;
+# if you change it, retrain the three algorithms.
+
+# API
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+python-dotenv==1.2.3
+
+# ML detector
+sentence-transformers==6.1.0
+transformers==5.18.0
+torch==2.14.1
+scikit-learn==1.9.0
+numpy==2.5.2
+pandas==3.0.5
+joblib==1.5.3
+matplotlib==3.11.2   # confusion-matrix figures in evaluate.py
+
+# PostgreSQL
+SQLAlchemy==2.0.49
+psycopg[binary]==3.3.6
+
+# Gemini (Google Gen AI SDK)
+google-genai==2.33.0
+httpx==0.28.1
+
+# Tests
+pytest==9.1.1

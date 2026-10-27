@@ -1,0 +1,120 @@
+{
+  "format_version": 1,
+  "algorithm": "logistic_regression",
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "lbfgs"
+  },
+  "random_seed": 42,
+  "labels": [
+    "benign",
+    "prompt_injection"
+  ],
+  "embedding": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_dim": 384,
+    "normalized": true,
+    "preprocessing": "nfkc-lower-ws-v1"
+  },
+  "score_type": "logistic_probability",
+  "thresholds": {
+    "benign_allow_threshold": 0.55,
+    "injection_block_threshold": 0.55,
+    "validation_objective": 0.955,
+    "selected_on": "validation"
+  },
+  "training": {
+    "train_samples": 186,
+    "validation_samples": 40,
+    "train_seconds": 0.0334,
+    "train_accuracy": 1.0
+  },
+  "validation_metrics": {
+    "samples": 40,
+    "accuracy": 0.975,
+    "precision": 0.9473684210526315,
+    "recall": 1.0,
+    "f1": 0.972972972972973,
+    "false_positive_rate": 0.045454545454545456,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": [
+      [
+        21,
+        1
+      ],
+      [
+        0,
+        18
+      ]
+    ],
+    "tn": 21,
+    "fp": 1,
+    "fn": 0,
+    "tp": 18
+  },
+  "validation_calibration": {
+    "samples": 40,
+    "ece": 0.19684111457318065,
+    "brier_score": 0.0600570930678642,
+    "n_bins": 10,
+    "bins": [
+      {
+        "bin": 0,
+        "count": 3,
+        "observed": 0.0,
+        "predicted": 0.08416855086882909
+      },
+      {
+        "bin": 1,
+        "count": 10,
+        "observed": 0.0,
+        "predicted": 0.15544064342975616
+      },
+      {
+        "bin": 2,
+        "count": 4,
+        "observed": 0.0,
+        "predicted": 0.265831895172596
+      },
+      {
+        "bin": 3,
+        "count": 4,
+        "observed": 0.0,
+        "predicted": 0.35746321082115173
+      },
+      {
+        "bin": 5,
+        "count": 2,
+        "observed": 1.0,
+        "predicted": 0.5625596940517426
+      },
+      {
+        "bin": 6,
+        "count": 2,
+        "observed": 0.5,
+        "predicted": 0.6756088137626648
+      },
+      {
+        "bin": 7,
+        "count": 5,
+        "observed": 1.0,
+        "predicted": 0.771860408782959
+      },
+      {
+        "bin": 8,
+        "count": 7,
+        "observed": 1.0,
+        "predicted": 0.8615923779351371
+      },
+      {
+        "bin": 9,
+        "count": 3,
+        "observed": 1.0,
+        "predicted": 0.9206991593043009
+      }
+    ]
+  },
+  "sklearn_version": "1.9.0",
+  "trained_at": "2026-10-26T09:55:34.372593+00:00"
+}

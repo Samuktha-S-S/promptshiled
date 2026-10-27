@@ -1,0 +1,23 @@
+{
+  "algorithm": "logistic_regression",
+  "selected_by": "validation composite 0.6*F1 + 0.4*(1-FPR); ties broken by lower validation Brier score",
+  "validation_ranking": [
+    {
+      "algorithm": "logistic_regression",
+      "composite": 0.9621483375959079,
+      "brier_score": 0.06025256556368917
+    },
+    {
+      "algorithm": "random_forest",
+      "composite": 0.9621483375959079,
+      "brier_score": 0.09427850877192982
+    },
+    {
+      "algorithm": "linear_svm",
+      "composite": 0.9482352941176471,
+      "brier_score": 0.02563581598437177
+    }
+  ],
+  "selected_at": "2026-10-26T18:20:42.597170+00:00",
+  "override": "set PROMPTSHIELD_CLASSIFIER=<algorithm> to use a different trained model"
+}

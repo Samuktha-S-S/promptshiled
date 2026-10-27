@@ -1,0 +1,26 @@
+{
+  "total_samples": 399,
+  "train_samples": 262,
+  "val_samples": 57,
+  "test_samples": 80,
+  "unseen_attack_samples": 25,
+  "split_ratios": "70/15/15 for main data, unseen attacks in test only",
+  "random_state": 42,
+  "stratified": true,
+  "unseen_attack_note": "Unseen attack samples are EXCLUDED from training and validation. They appear ONLY in the test set to evaluate generalization.",
+  "source": "All examples are synthetic, generated for this research project.",
+  "dataset_version": 2,
+  "v2_extension": {
+    "file": "raw/conversational_extension.csv",
+    "rows": 107,
+    "benign_conversational": 75,
+    "conversational_injection": 32,
+    "per_split": {
+      "train": 76,
+      "val": 17,
+      "test": 14
+    },
+    "grouping": "connected components of Sentence-BERT cosine >= 0.85; 107 groups; whole groups assigned per label (seed 42)",
+    "note": "v1 rows keep their original split; v1 splits preserved in splits_v1/."
+  }
+}

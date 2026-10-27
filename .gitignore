@@ -24,3 +24,15 @@ Thumbs.db
 .vscode/
 
 # Byte-compiled / binary dynamic outputs if any (keep models, dataset, results)
+
+# Secrets - never commit real credentials
+.env
+.env.*
+*.env
+!.env.example
+
+# Test / tooling caches
+.pytest_cache/
+
+# Derived embedding cache (regenerated from the splits by ml_detector.datasets.loader)
+ml_detector/datasets/processed/
